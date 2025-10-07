@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
@@ -566,7 +567,7 @@ section
 {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 51%;
     transform: translate(-50%,-50%) rotate(-90deg);
     width: 120px;
     height: 120px;
@@ -692,8 +693,8 @@ section
 
 .main-text
 {
-    padding-top: 60px; /* Reduce top padding above project section for big screens */
-    margin-top: 40px;  /* Reduce margin above project section for big screens */
+    padding-top: 130px;
+    margin-top: 200px;
 }
 
 .main-text h2
@@ -952,31 +953,40 @@ section
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan 
 }
 
-/* Reduce space between skills and project section */
-.main-text {
-    padding-top: 40px;
-    margin-top: 20px;
+.last-text p
+{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(7,85,91);
+    font-weight: 300;
+    margin-top: 70px;
 }
 
-/* On smaller screens, reduce even more */
-@media (max-width: 900px) {
-    .main-text {
-        padding-top: 20px;
-        margin-top: 10px;
-    }
+.top
+{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
 }
-@media (max-width: 768px) {
-    .main-text {
-        padding-top: 10px;
-        margin-top: 5px;
-    }
+
+.top i
+{
+    color: #000000;
+    background: #0ef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
 }
-@media (max-width: 480px) {
-    .main-text {
-        padding-top: 5px;
-        margin-top: 2px;
-    }
-}
+
+
+
+ 
+
+
+
+
+
 
 /* --- Skills Section Animation: Default State (hidden/inactive) --- */
 .container1 .Technical-bars .bar .info span,
