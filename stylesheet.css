@@ -931,11 +931,15 @@ section
     height: 220px;
 }
 
-.contact-form form .send
+.contact-form form .send 
 {
     display: inline-block;
+    width: 600px; /* You can adjust size */
+    max-width: 100%;
+    margin: 0 auto;
     padding: 12px 28px;
     background: #0ef;
+    border: none;
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;

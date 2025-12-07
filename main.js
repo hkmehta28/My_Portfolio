@@ -80,3 +80,39 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
+// ===============================
+// Contact Form - EmailJS Integration
+// ===============================
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Change button state while sending
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+
+    emailjs
+      .sendForm("service_qdix0f8", "template_71qkct8", contactForm)
+      .then(() => {
+        alert("📩 Message sent successfully!");
+        contactForm.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("❌ Failed to send message. Please try again.");
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send Message";
+        }
+      });
+  });
+}

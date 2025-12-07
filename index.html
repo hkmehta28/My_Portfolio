@@ -247,15 +247,33 @@
         
 
         <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="Enter Your Email" required>
+  <form id="contact-form">
+    <input 
+      type="text" 
+      name="from_name" 
+      placeholder="Enter Your Name" 
+      required
+    />
 
-                <input type="" placeholder="Enter Your Subject">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter your Message" required></textarea>
-                <input type="submit" value="Submit" class="send">
-            </form>
-        </div>
+    <input 
+      type="email" 
+      name="from_email" 
+      placeholder="Enter Your Email" 
+      required
+    />
+
+    <textarea 
+      name="message" 
+      cols="40" 
+      rows="10" 
+      placeholder="Enter your Message" 
+      required
+    ></textarea>
+
+    <button type="submit" class="send">Send Message</button>
+  </form>
+</div>
+
     </section>
     <div class="last-text">
         <p>Developed with love by Harshit Kumar Mehta © 2025</p>
@@ -264,7 +282,15 @@
     <!-- hi -->
 
 
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+<script>
+  (function () {
+    // Initialize EmailJS with your Public Key
+    emailjs.init("EwsoH5s_c5PK94q3q");
+  })();
+</script>
 
 
 
